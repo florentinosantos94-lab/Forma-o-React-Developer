@@ -1,0 +1,21 @@
+Projeto: Wiki de Repositórios GitHub
+
+## Descrição
+Neste Desafio de Projeto, você criará uma Wiki para salvar alguns repositórios do GitHub. Aprenderá a consumir a API do GitHub e listar repositórios de interesse, utilizando JavaScript e React.
+
+## Primeiros Passos com o Create React App
+Este projeto foi iniciado com o Create React App.
+
+### Scripts Disponíveis
+No diretório do projeto, você pode executar:
+
+- `npm start`: Executa o aplicativo no modo de desenvolvimento. Abra http://localhost:3000 para visualizá-lo.
+- `npm test`: Inicia o executor de testes no modo de visualização interativo.
+- `npm run build`: Compila o aplicativo para produção na pasta `build`.
+
+Lembre-se de que o arquivo compilado está pronto para ser implantado. Não se esqueça de consultar a documentação para obter mais informações.
+
+### Ejetar o Projeto
+O comando `npm run eject` permite personalizar as configurações do projeto, mas é irreversível. Use com cuidado.
+
+Aproveite o desafio de criar sua Wiki de Repositórios GitHub! 🚀
