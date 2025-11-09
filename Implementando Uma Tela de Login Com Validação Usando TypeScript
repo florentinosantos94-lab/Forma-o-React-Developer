@@ -1,0 +1,68 @@
+// Importando as bibliotecas necessárias
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+// Estilização dos componentes
+const Container = styled.div`
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+// Componente de formulário de login com TypeScript
+const FormularioLogin: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Lógica para verificar autenticação
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+    // Aqui você pode implementar a lógica de autenticação
+  };
+
+  return (
+    <Container>
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <Input
+          type="email"
+          placeholder="E-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
+        <Button type="submit">Entrar</Button>
+      </form>
+    </Container>
+  );
+};
+
+export default FormularioLogin;
