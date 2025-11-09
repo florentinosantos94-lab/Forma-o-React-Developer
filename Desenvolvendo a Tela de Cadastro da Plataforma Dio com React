@@ -1,0 +1,76 @@
+// Importando as bibliotecas necessárias
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+// Estilização dos componentes
+const Container = styled.div`
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+// Componente de formulário de cadastro
+const FormularioCadastro = () => {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Lógica para lidar com o envio do formulário
+    console.log('Nome:', nome);
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+    // Aqui você pode enviar os dados para o servidor
+  };
+
+  return (
+    <Container>
+      <h2>Cadastro</h2>
+      <form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          placeholder="Nome"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+        />
+        <Input
+          type="email"
+          placeholder="E-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
+        <Button type="submit">Cadastrar</Button>
+      </form>
+    </Container>
+  );
+};
+
+export default FormularioCadastro;
